@@ -1,0 +1,106 @@
+[
+  {
+    "title": "our professionam services",
+    "subtitle": null,
+    "type": "text",
+    "images": [],
+    "content": [
+      {
+        "title": null,
+        "paragraph": [
+          "We develop solutions for all brands,\nbuild an authentic product identity,\nand much more.\nLet your journey begin with us.",
+          "50 clients"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "iso certified",
+    "subtitle": null,
+    "type": "text",
+    "images": [],
+    "content": [
+      {
+        "title": null,
+        "paragraph": [
+          "All of our products are Steroid Free, Tar Free, Medicinal ingredients Free, and synthetic vitamins Free.",
+          "Our manufacturing teams operate your skincare products according to Good Manufacturing Practices to ensure high quality. We are proudly certified ISO 22716:2007, ISO 13485:2016, and ISO 9001:2015. Our teams follow strict hygiene rules and procedures to provide the highest quality products."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "CONCEPT & DESIGN",
+    "subtitle": null,
+    "type": "text",
+    "images": [],
+    "content": [
+      {
+        "title": null,
+        "paragraph": [
+          "Knowing the importance of image in cosmetics, we provide top-tier graphic design and branding services. Each element of the package (material, color, shape) reflects the concept of the brand and its individuality."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "REGULATION",
+    "subtitle": null,
+    "type": "text",
+    "images": [],
+    "content": [
+      {
+        "title": null,
+        "paragraph": [
+          " We help you with regulatory compliances. No more worries with the regulations surrounding your cosmetic products. Our experts are informed of all legislation regarding cosmetics and anticipate any new international and European requirements."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "research & development",
+    "subtitle": null,
+    "type": "r&d"
+  },
+  {
+    "title": null,
+    "subtitle": null,
+    "type": "text",
+    "images": [],
+    "content": [
+      {
+        "title": "BRANDING & MARKETING",
+        "paragraph": ["A little push to make your brand alive ?"]
+      },
+      {
+        "title": "STRATEGY",
+        "paragraph": [
+          "We define the target audience with you & build a personalized marketing and branding strategy."
+        ]
+      },
+      {
+        "title": "WEB DESIGN",
+        "paragraph": [
+          "Based on your business needs, We create your website & brand identity in the way you want."
+        ]
+      },
+      {
+        "title": "PHOTOGRAPHY",
+        "paragraph": [
+          "Upon your request, we can make professionnal pictures of your products and the manufacturing process."
+        ]
+      },
+      {
+        "title": "INFLUENCERS",
+        "paragraph": [
+          "We can provide you different profiles and reach out to influencers that interest you for representing your brand."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "contact",
+    "subtitle": null,
+    "type": "contact"
+  }
+]

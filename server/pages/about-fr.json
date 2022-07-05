@@ -1,0 +1,49 @@
+[
+  {
+    "title": "about us",
+    "subtitle": "bonjour!",
+    "type": "text",
+    "content": [
+      {
+        "title": "null",
+        "paragraph": [
+          "Our cosmetic laboratories have a high production capacity and excellent market-proven quality."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "about",
+    "subtitle": null,
+    "type": "text",
+    "content": [
+      {
+        "title": "Co-founders Defne and Yehiel Amouyal",
+        "paragraph": [
+          "“We teamed up with so many different personalities with various needs and goals, from the environmentally-minded brands to the clean, responsible, or luxury cosmetic lines. We value building trust and partnerships and see those projects growing ! ”",
+          "Our team is made of positive & motivated people. The Product, Project Managers, and the R&D team are always here to advise and guide you through all the creative processes."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "where you can find our products",
+    "subtitle": null,
+    "type": "location"
+  },
+  {
+    "title": "projects",
+    "subtitle": null,
+    "type": "project"
+  },
+  {
+    "title": "FAQ",
+    "subtitle": null,
+    "type": "FAQ"
+  },
+  {
+    "title": "contact",
+    "subtitle": null,
+    "type": "contact"
+  }
+]

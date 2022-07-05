@@ -1,0 +1,32 @@
+[
+  {
+    "title": "choose your products",
+    "subtitle": null,
+    "type": "product"
+  },
+  {
+    "title": "need a custom formula",
+    "subtitle": null,
+    "type": "text",
+    "images": [],
+    "content": [
+      {
+        "title": null,
+        "paragraph": [
+          "At Bryhel, our team of well-qualified chemists can provide you with more than hundreds existing formulas for private label manufacturing.",
+          "Do you need a parabens-free, sodium-free, alcohol-free product or a specific texture, scent, or color? Just let us know!",
+          "If our products do not meet your need, and if you have certain specifications or need an exclusive product, we can develop a custom formula to precisely satisfy your requirements.",
+          "Ready to submit a product development request ?"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "share your project with us"
+  },
+  {
+    "title": "contact",
+    "subtitle": null,
+    "type": "contact"
+  }
+]

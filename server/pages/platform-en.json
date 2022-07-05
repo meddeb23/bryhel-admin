@@ -1,0 +1,35 @@
+[
+  {
+    "title": "PLATFORM",
+    "subtitle": null,
+    "type": "text",
+    "content": [
+      {
+        "images": [],
+        "title": "Get access to our private platform and track your project.",
+        "paragraph": [
+          "You can track every step and product throughout the manufacturing process, from when raw materials enter the factory to when final products are shipped."
+        ]
+      },
+      {
+        "images": [],
+        "title": "  We believe in a world where every product or service has an easy to use experience.",
+        "paragraph": [
+          "And our mission is to make it happen. Bryhel provides real-time visibility into its operations by facilitating full supply chain transparency."
+        ]
+      },
+      {
+        "images": [],
+        "title": "Your product is finally developped",
+        "paragraph": [
+          "Your product is finally developped responding to your demands and ready to be ordered on Bryhel Platform."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "contact",
+    "subtitle": null,
+    "type": "contact"
+  }
+]
