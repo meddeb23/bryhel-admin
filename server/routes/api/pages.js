@@ -1,7 +1,13 @@
 const routes = require("express").Router();
 
 const pageList = require("../../database/getPages");
+const fs = require("fs");
+const path = require("path");
 const { validateQueryParams } = require("../../utilities/validation");
+const Award = require("../../models/Award");
+const Location = require("../../models/location");
+const Product = require("../../models/Product");
+const Project = require("../../models/Project");
 
 // @desc get the page content
 
@@ -40,10 +46,8 @@ routes.post("/", async (req, res) => {
   const language = req.query.language || "en";
   const title = req.query.title || "about";
   const { content } = req.body;
-  console.log(content);
   const message = validateQueryParams(language, title);
   if (message) return res.status(400).json(message);
-  console.log(content);
   switch (title) {
     case "about":
       await pageList.updateAboutPage(language, title, content);
@@ -63,6 +67,43 @@ routes.post("/", async (req, res) => {
     default:
       return res.status(400).json({ message: "invalide page" });
   }
+  res.status(203).json({ success: true });
+});
+
+routes.post("/upload", async (req, res) => {
+  const { slug, type } = req.body;
+  const { image } = req.files;
+  if (image) {
+    const regex = /^image\/(png|jpg|jpeg)$/;
+    if (!regex.test(image.mimetype))
+      return res
+        .status(400)
+        .json({ message: "File type should be png, jpg, or jpeg" });
+    fs.writeFileSync(
+      path.join(__dirname, "..", "..", "public", `${type}_${image.name}`),
+      image.data
+    );
+    const filePath = `/static/${type}_${image.name}`;
+
+    switch (type) {
+      case "award":
+        await Award.update({ logo: filePath }, { where: { slug } });
+        break;
+      case "location":
+        await Location.update({ logo: filePath }, { where: { slug } });
+        break;
+      case "product":
+        await Product.update({ logo: filePath }, { where: { slug } });
+        break;
+      case "project":
+        await Project.update({ logo: filePath }, { where: { slug } });
+        break;
+
+      default:
+        return res.status(400).json({ message: "invalide params" });
+    }
+  }
+
   res.status(203).json({ success: true });
 });
 

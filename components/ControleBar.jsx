@@ -9,7 +9,7 @@ export default function ControleBar({
   const pages = ["about", "products", "services", "platform", "contact"];
   const language = ["fr", "en"];
   return (
-    <div className="flex justify-between items-center bg-white rounded-md p-4 mx-auto my-4">
+    <div className="flex justify-between items-center bg-gray-100 rounded-md p-4 mx-auto my-4">
       <DropDownMenu
         values={pages}
         defaultValue={page}

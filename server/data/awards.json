@@ -2,26 +2,66 @@
   {
     "name": "CEW",
     "description": "Competition with over 3,500 companies\nin the beauty and retail industries",
-    "logo": "/static/ULRAA.png"
+    "logo": "/static/ULRAA.png",
+    "slug": "slug_award_1"
   },
   {
     "name": "SPA",
     "description": "Bryhel was selected among the best\nskincare products of the Year 2019.",
-    "logo": "/static/ULRAA.png"
+    "logo": "/static/ULRAA.png",
+    "slug": "slug_award_2"
   },
   {
     "name": "BAZAAR",
     "description": "Bryhel was selected among the best\nskincare products of the Year 2020.",
-    "logo": "/static/ULRAA.png"
+    "logo": "/static/ULRAA.png",
+    "slug": "slug_award_3"
   },
   {
     "name": "ALLURE",
     "description": "We won the Allure Readers' Choice Awards\namong 68 products globaly.",
-    "logo": "/static/ULRAA.png"
+    "logo": "/static/ULRAA.png",
+    "slug": "slug_award_4"
   },
   {
     "name": "ULTRA",
     "description": "Bryhel Cosmetic Labs’s products were\nchosen as the best cosmetic products.",
-    "logo": "/static/ULRAA.png"
+    "logo": "/static/ULRAA.png",
+    "slug": "slug_award_5"
+  },
+  {
+    "name": "CEW",
+    "description": "Competition with over 3,500 companies\nin the beauty and retail industries",
+    "logo": "/static/ULRAA.png",
+    "slug": "slug_award_1",
+    "language": "fr"
+  },
+  {
+    "name": "SPA",
+    "description": "Bryhel was selected among the best\nskincare products of the Year 2019.",
+    "logo": "/static/ULRAA.png",
+    "slug": "slug_award_2",
+    "language": "fr"
+  },
+  {
+    "name": "BAZAAR",
+    "description": "Bryhel was selected among the best\nskincare products of the Year 2020.",
+    "logo": "/static/ULRAA.png",
+    "slug": "slug_award_3",
+    "language": "fr"
+  },
+  {
+    "name": "ALLURE",
+    "description": "We won the Allure Readers' Choice Awards\namong 68 products globaly.",
+    "logo": "/static/ULRAA.png",
+    "slug": "slug_award_4",
+    "language": "fr"
+  },
+  {
+    "name": "ULTRA",
+    "description": "Bryhel Cosmetic Labs’s products were\nchosen as the best cosmetic products.",
+    "logo": "/static/ULRAA.png",
+    "slug": "slug_award_5",
+    "language": "fr"
   }
 ]

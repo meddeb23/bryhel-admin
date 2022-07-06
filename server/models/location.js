@@ -20,6 +20,10 @@ const Location = sequelize.define("location", {
     type: Sequelize.ENUM("fr", "en"),
     defaultValue: "en",
   },
+  slug: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
 });
 
 module.exports = Location;

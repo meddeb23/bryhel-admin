@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.TextArea {
+  @apply w-full pt-2 text-gray-600 px-4 outline-none bg-slate-100 rounded;
+}

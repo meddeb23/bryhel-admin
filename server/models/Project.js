@@ -24,6 +24,10 @@ const Project = sequelize.define("project", {
     type: Sequelize.ENUM("fr", "en"),
     defaultValue: "en",
   },
+  slug: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
 });
 
 module.exports = Project;

@@ -1,34 +1,90 @@
 [
   {
     "name": "birchbox",
-    "logo": "/static/ulta.png"
+    "logo": "/static/ulta.png",
+    "slug": "slug_location_1"
   },
   {
     "name": "iltra",
-    "logo": "/static/ulta.png"
+    "logo": "/static/ulta.png",
+    "slug": "slug_location_2"
   },
   {
     "name": "targte",
-    "logo": "/static/ulta.png"
+    "logo": "/static/ulta.png",
+    "slug": "slug_location_3"
   },
   {
     "name": "sephora",
-    "logo": "/static/ulta.png"
+    "logo": "/static/ulta.png",
+    "slug": "slug_location_4"
   },
   {
     "name": "dermstore",
-    "logo": "/static/ulta.png"
+    "logo": "/static/ulta.png",
+    "slug": "slug_location_5"
   },
   {
     "name": "nordstrom",
-    "logo": "/static/ulta.png"
+    "logo": "/static/ulta.png",
+    "slug": "slug_location_6"
   },
   {
     "name": "bluemercury",
-    "logo": "/static/ulta.png"
+    "logo": "/static/ulta.png",
+    "slug": "slug_location_7"
   },
   {
     "name": "amazon",
-    "logo": "/static/ulta.png"
+    "logo": "/static/ulta.png",
+    "slug": "slug_location_8"
+  },
+  {
+    "name": "birchbox",
+    "logo": "/static/ulta.png",
+    "slug": "slug_location_1",
+    "language": "fr"
+  },
+  {
+    "name": "iltra",
+    "logo": "/static/ulta.png",
+    "slug": "slug_location_2",
+    "language": "fr"
+  },
+  {
+    "name": "targte",
+    "logo": "/static/ulta.png",
+    "slug": "slug_location_3",
+    "language": "fr"
+  },
+  {
+    "name": "sephora",
+    "logo": "/static/ulta.png",
+    "slug": "slug_location_4",
+    "language": "fr"
+  },
+  {
+    "name": "dermstore",
+    "logo": "/static/ulta.png",
+    "slug": "slug_location_5",
+    "language": "fr"
+  },
+  {
+    "name": "nordstrom",
+    "logo": "/static/ulta.png",
+    "slug": "slug_location_6",
+    "language": "fr"
+  },
+  {
+    "name": "bluemercury",
+    "logo": "/static/ulta.png",
+    "slug": "slug_location_7",
+    "language": "fr"
+  },
+  {
+    "name": "amazon",
+    "logo": "/static/ulta.png",
+    "slug": "slug_location_8",
+    "language": "fr"
   }
 ]

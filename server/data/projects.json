@@ -3,18 +3,84 @@
     "name": "Corporate website Crosley",
     "description": "Corporate web",
     "image": "/static/About1.png",
-    "language": "en"
+    "language": "en",
+    "slug": "slug_project_1"
   },
   {
     "name": "Corporate website Crosley",
     "description": "Corporate web",
     "image": "/static/About1.png",
-    "language": "en"
+    "language": "en",
+    "slug": "slug_project_2"
   },
   {
     "name": "Corporate website Crosley",
     "description": "Corporate web",
     "image": "/static/About1.png",
-    "language": "en"
+    "language": "en",
+    "slug": "slug_project_3"
+  },
+  {
+    "name": "Corporate website Crosley",
+    "description": "Corporate web",
+    "image": "/static/About1.png",
+    "language": "fr",
+    "slug": "slug_project_1"
+  },
+  {
+    "name": "Corporate website Crosley",
+    "description": "Corporate web",
+    "image": "/static/About1.png",
+    "language": "fr",
+    "slug": "slug_project_2"
+  },
+  {
+    "name": "Corporate website Crosley",
+    "description": "Corporate web",
+    "image": "/static/About1.png",
+    "language": "fr",
+    "slug": "slug_project_3"
+  },
+  {
+    "name": "Corporate website Crosley",
+    "description": "Corporate web",
+    "image": "/static/About1.png",
+    "language": "fr",
+    "slug": "slug_project_1"
+  },
+  {
+    "name": "Corporate website Crosley",
+    "description": "Corporate web",
+    "image": "/static/About1.png",
+    "language": "fr",
+    "slug": "slug_project_2"
+  },
+  {
+    "name": "Corporate website Crosley",
+    "description": "Corporate web",
+    "image": "/static/About1.png",
+    "language": "fr",
+    "slug": "slug_project_3"
+  },
+  {
+    "name": "Corporate website Crosley",
+    "description": "Corporate web",
+    "image": "/static/About1.png",
+    "language": "fr",
+    "slug": "slug_project_1"
+  },
+  {
+    "name": "Corporate website Crosley",
+    "description": "Corporate web",
+    "image": "/static/About1.png",
+    "language": "fr",
+    "slug": "slug_project_2"
+  },
+  {
+    "name": "Corporate website Crosley",
+    "description": "Corporate web",
+    "image": "/static/About1.png",
+    "language": "fr",
+    "slug": "slug_project_3"
   }
 ]

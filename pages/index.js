@@ -7,7 +7,8 @@ function HomePage() {
   const [page, setpage] = useState("about");
   const [lang, setlang] = useState("en");
   const [data, setData] = useState();
-  const { setcontent, content } = useContext(Store);
+  const { setcontent, content, newImages } = useContext(Store);
+
   useEffect(() => {
     axios
       .get(`/api/v1/page`, { params: { title: page, language: lang } })
@@ -24,7 +25,26 @@ function HomePage() {
     setcontent(newContent);
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
+    if (newImages) {
+      for (let i = 0; i < newImages.length; i++) {
+        const element = newImages[i];
+        const formData = new FormData();
+        formData.append("image", element.image);
+        formData.append("type", element.type);
+        formData.append("slug", element.slug);
+        const { data, status } = await axios.post(
+          `/api/v1/page/upload`,
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        console.log(data, status);
+      }
+    }
     axios
       .post(`/api/v1/page?title=${page}&language=${lang}`, { content })
       .then(({ data }) => console.log(data));
@@ -38,7 +58,7 @@ function HomePage() {
         lang={lang}
         onSelectLang={setlang}
       />
-      <div className="bg-white rounded-md mt-2 p-4">
+      <div className="rounded-md mt-2 p-4">
         {data &&
           data.map((section, idx) => (
             <SectionDisplay

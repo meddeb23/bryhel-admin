@@ -1,34 +1,90 @@
 [
   {
     "name": "face care",
-    "image": "/static/p5.png"
+    "image": "/static/p5.png",
+    "slug": "slug_product_1"
   },
   {
     "name": "health care",
-    "image": "/static/p5.png"
+    "image": "/static/p5.png",
+    "slug": "slug_product_2"
   },
   {
     "name": "hair care",
-    "image": "/static/p5.png"
+    "image": "/static/p5.png",
+    "slug": "slug_product_3"
   },
   {
     "name": "custom formula",
-    "image": "/static/p5.png"
+    "image": "/static/p5.png",
+    "slug": "slug_product_4"
   },
   {
     "name": "body care",
-    "image": "/static/p5.png"
+    "image": "/static/p5.png",
+    "slug": "slug_product_5"
   },
   {
     "name": "spa care",
-    "image": "/static/p5.png"
+    "image": "/static/p5.png",
+    "slug": "slug_product_6"
   },
   {
     "name": "pet care",
-    "image": "/static/p5.png"
+    "image": "/static/p5.png",
+    "slug": "slug_product_7"
   },
   {
     "name": "make-up",
-    "image": "/static/p5.png"
+    "image": "/static/p5.png",
+    "slug": "slug_product_8"
+  },
+  {
+    "name": "face care",
+    "image": "/static/p5.png",
+    "slug": "slug_product_1",
+    "language": "fr"
+  },
+  {
+    "name": "health care",
+    "image": "/static/p5.png",
+    "slug": "slug_product_2",
+    "language": "fr"
+  },
+  {
+    "name": "hair care",
+    "image": "/static/p5.png",
+    "slug": "slug_product_3",
+    "language": "fr"
+  },
+  {
+    "name": "custom formula",
+    "image": "/static/p5.png",
+    "slug": "slug_product_4",
+    "language": "fr"
+  },
+  {
+    "name": "body care",
+    "image": "/static/p5.png",
+    "slug": "slug_product_5",
+    "language": "fr"
+  },
+  {
+    "name": "spa care",
+    "image": "/static/p5.png",
+    "slug": "slug_product_6",
+    "language": "fr"
+  },
+  {
+    "name": "pet care",
+    "image": "/static/p5.png",
+    "slug": "slug_product_7",
+    "language": "fr"
+  },
+  {
+    "name": "make-up",
+    "image": "/static/p5.png",
+    "slug": "slug_product_8",
+    "language": "fr"
   }
 ]

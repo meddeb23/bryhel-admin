@@ -119,10 +119,10 @@ function pageList() {
   }
   async function updatePage(language, page, content) {
     const data = JSON.stringify(content);
-    // fs.writeFileSync(
-    //   path.join(__dirname, "..", "pages", `${page}-${language}.json`),
-    //   data
-    // );
+    fs.writeFileSync(
+      path.join(__dirname, "..", "pages", `${page}-${language}.json`),
+      data
+    );
   }
 }
 
