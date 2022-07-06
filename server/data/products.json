@@ -1,34 +1,34 @@
 [
   {
     "name": "face care",
-    "image": ""
+    "image": "/static/p5.png"
   },
   {
     "name": "health care",
-    "image": ""
+    "image": "/static/p5.png"
   },
   {
     "name": "hair care",
-    "image": ""
+    "image": "/static/p5.png"
   },
   {
     "name": "custom formula",
-    "image": ""
+    "image": "/static/p5.png"
   },
   {
     "name": "body care",
-    "image": ""
+    "image": "/static/p5.png"
   },
   {
     "name": "spa care",
-    "image": ""
+    "image": "/static/p5.png"
   },
   {
     "name": "pet care",
-    "image": ""
+    "image": "/static/p5.png"
   },
   {
     "name": "make-up",
-    "image": ""
+    "image": "/static/p5.png"
   }
 ]

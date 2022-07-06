@@ -1,8 +1,9 @@
 [
   {
-    "title": "choose your products",
+    "title": "choisissez vos produits",
     "subtitle": null,
-    "type": "product"
+    "type": "product",
+    "products": []
   },
   {
     "title": "need a custom formula",
@@ -21,12 +22,6 @@
       }
     ]
   },
-  {
-    "title": "share your project with us"
-  },
-  {
-    "title": "contact",
-    "subtitle": null,
-    "type": "contact"
-  }
+  { "title": "share your project with us" },
+  { "title": "contact", "subtitle": null, "type": "contact", "contact": [] }
 ]

@@ -8,7 +8,7 @@ module.exports = (app) => {
   app.use("/static", express.static(path.join(__dirname, "..", "public")));
   app.use(express.json());
   app.use(morgan("tiny"));
-  app.use(helmet());
+  // app.use(helmet());
 
   app.use("/api/v1/page", require("../routes/api/pages"));
 

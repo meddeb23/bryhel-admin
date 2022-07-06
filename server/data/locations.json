@@ -1,34 +1,34 @@
 [
   {
     "name": "birchbox",
-    "logo": ""
+    "logo": "/static/ulta.png"
   },
   {
     "name": "iltra",
-    "logo": ""
+    "logo": "/static/ulta.png"
   },
   {
     "name": "targte",
-    "logo": ""
+    "logo": "/static/ulta.png"
   },
   {
     "name": "sephora",
-    "logo": ""
+    "logo": "/static/ulta.png"
   },
   {
     "name": "dermstore",
-    "logo": ""
+    "logo": "/static/ulta.png"
   },
   {
     "name": "nordstrom",
-    "logo": ""
+    "logo": "/static/ulta.png"
   },
   {
     "name": "bluemercury",
-    "logo": ""
+    "logo": "/static/ulta.png"
   },
   {
     "name": "amazon",
-    "logo": ""
+    "logo": "/static/ulta.png"
   }
 ]

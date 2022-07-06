@@ -5,6 +5,10 @@ const Product = require("../models/Product");
 const Project = require("../models/Project");
 const RandD = require("../models/RandD");
 
+const fs = require("fs");
+const path = require("path");
+const Award = require("../models/Award");
+
 function pageList() {
   return Object.freeze({
     getAboutPage,
@@ -12,6 +16,7 @@ function pageList() {
     getServicesPage,
     getPlatformPage,
     getContactPage,
+    updatePage,
   });
 
   async function addContact(language, file) {
@@ -23,9 +28,10 @@ function pageList() {
 
   async function getAboutPage(language) {
     let file = require(`../pages/about-${language}.json`);
-    file[2].location = await Location.findAll({ where: { language } });
-    file[3].projects = await Project.findAll({ where: { language } });
-    file[4].FAQ = await FAQ.findAll({ where: { language } });
+    file[1].awards = await Award.findAll({ where: { language } });
+    file[3].location = await Location.findAll({ where: { language } });
+    file[4].projects = await Project.findAll({ where: { language } });
+    file[5].FAQ = await FAQ.findAll({ where: { language } });
     file = await addContact(language, file);
     return file;
   }
@@ -50,6 +56,14 @@ function pageList() {
     let file = require(`../pages/contact-${language}.json`);
     file = await addContact(language, file);
     return file;
+  }
+
+  async function updatePage(language, page, content) {
+    const data = JSON.stringify(content);
+    fs.writeFileSync(
+      path.join(__dirname, "..", "pages", `${page}-${language}.json`),
+      data
+    );
   }
 }
 module.exports = pageList();

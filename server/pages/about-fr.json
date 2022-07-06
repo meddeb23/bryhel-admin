@@ -5,9 +5,9 @@
     "type": "text",
     "content": [
       {
-        "title": "null",
+        "title": null,
         "paragraph": [
-          "Our cosmetic laboratories have a high production capacity and excellent market-proven quality."
+          "Nos laboratoires cosmétiques disposent d'une capacité de production élevée et d'une excellente qualité éprouvée sur le marché."
         ]
       }
     ]
@@ -29,21 +29,10 @@
   {
     "title": "where you can find our products",
     "subtitle": null,
-    "type": "location"
+    "type": "location",
+    "location": []
   },
-  {
-    "title": "projects",
-    "subtitle": null,
-    "type": "project"
-  },
-  {
-    "title": "FAQ",
-    "subtitle": null,
-    "type": "FAQ"
-  },
-  {
-    "title": "contact",
-    "subtitle": null,
-    "type": "contact"
-  }
+  { "title": "projects", "subtitle": null, "type": "project", "projects": [] },
+  { "title": "FAQ", "subtitle": null, "type": "FAQ", "FAQ": [] },
+  { "title": "contact", "subtitle": null, "type": "contact", "contact": [] }
 ]

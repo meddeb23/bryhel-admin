@@ -3,6 +3,8 @@ const routes = require("express").Router();
 const pageList = require("../../database/getPages");
 const { validateQueryParams } = require("../../utilities/validation");
 
+// @desc get the page content
+
 routes.get("/", async (req, res) => {
   const language = req.query.language || "en";
   const title = req.query.title || "about";
@@ -29,7 +31,38 @@ routes.get("/", async (req, res) => {
     default:
       return res.status(400).json({ message: "invalide page" });
   }
-  res.status(200).json({ page });
+  res.status(200).json(page);
+});
+
+// @desc update the page content
+
+routes.post("/", async (req, res) => {
+  const language = req.query.language || "en";
+  const title = req.query.title || "about";
+  const { content } = req.body;
+  console.log(content);
+  const message = validateQueryParams(language, title);
+  if (message) return res.status(400).json(message);
+  switch (title) {
+    case "about":
+      await pageList.updatePage(language, title, content);
+      break;
+    case "products":
+      await pageList.updatePage(language, title, content);
+      break;
+    case "services":
+      await pageList.updatePage(language, title, content);
+      break;
+    case "platform":
+      await pageList.updatePage(language, title, content);
+      break;
+    case "contact":
+      await pageList.updatePage(language, title, content);
+      break;
+    default:
+      return res.status(400).json({ message: "invalide page" });
+  }
+  res.status(203).json({ success: true });
 });
 
 module.exports = routes;

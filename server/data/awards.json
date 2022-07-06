@@ -2,26 +2,26 @@
   {
     "name": "CEW",
     "description": "Competition with over 3,500 companies\nin the beauty and retail industries",
-    "logo": ""
+    "logo": "/static/ULRAA.png"
   },
   {
     "name": "SPA",
     "description": "Bryhel was selected among the best\nskincare products of the Year 2019.",
-    "logo": ""
+    "logo": "/static/ULRAA.png"
   },
   {
     "name": "BAZAAR",
     "description": "Bryhel was selected among the best\nskincare products of the Year 2020.",
-    "logo": ""
+    "logo": "/static/ULRAA.png"
   },
   {
     "name": "ALLURE",
     "description": "We won the Allure Readers' Choice Awards\namong 68 products globaly.",
-    "logo": ""
+    "logo": "/static/ULRAA.png"
   },
   {
     "name": "ULTRA",
     "description": "Bryhel Cosmetic Labs’s products were\nchosen as the best cosmetic products.",
-    "logo": ""
+    "logo": "/static/ULRAA.png"
   }
 ]
