@@ -43,9 +43,10 @@ routes.post("/", async (req, res) => {
   console.log(content);
   const message = validateQueryParams(language, title);
   if (message) return res.status(400).json(message);
+  console.log(content);
   switch (title) {
     case "about":
-      await pageList.updatePage(language, title, content);
+      await pageList.updateAboutPage(language, title, content);
       break;
     case "products":
       await pageList.updatePage(language, title, content);
