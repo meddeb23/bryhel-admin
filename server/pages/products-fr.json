@@ -1,9 +1,66 @@
 [
   {
-    "title": "choisissez vos produits",
+    "title": "choose your products",
     "subtitle": null,
     "type": "product",
-    "products": []
+    "products": [
+      {
+        "id": 9,
+        "name": "face care",
+        "image": "/static/p5.png",
+        "language": "fr",
+        "slug": "slug_product_1"
+      },
+      {
+        "id": 10,
+        "name": "health care",
+        "image": "/static/p5.png",
+        "language": "fr",
+        "slug": "slug_product_2"
+      },
+      {
+        "id": 11,
+        "name": "hair care",
+        "image": "/static/p5.png",
+        "language": "fr",
+        "slug": "slug_product_3"
+      },
+      {
+        "id": 12,
+        "name": "custom formula",
+        "image": "/static/p5.png",
+        "language": "fr",
+        "slug": "slug_product_4"
+      },
+      {
+        "id": 13,
+        "name": "body care",
+        "image": "/static/p5.png",
+        "language": "fr",
+        "slug": "slug_product_5"
+      },
+      {
+        "id": 14,
+        "name": "spa care",
+        "image": "/static/p5.png",
+        "language": "fr",
+        "slug": "slug_product_6"
+      },
+      {
+        "id": 15,
+        "name": "pet care",
+        "image": "/static/p5.png",
+        "language": "fr",
+        "slug": "slug_product_7"
+      },
+      {
+        "id": 16,
+        "name": "make-up",
+        "image": "/static/p5.png",
+        "language": "fr",
+        "slug": "slug_product_8"
+      }
+    ]
   },
   {
     "title": "need a custom formula",

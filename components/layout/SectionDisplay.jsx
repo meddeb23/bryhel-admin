@@ -50,7 +50,8 @@ export default function SectionDisplay({ section, handleChange }) {
       oldValue.location = newValues;
       return oldValue;
     });
-    handleChange(newValues);
+
+    handleChange({ ...data, location: newValues });
   };
   const handleProductChange = (e, idx, field) => {
     const newValues = [...data.products];
@@ -71,7 +72,8 @@ export default function SectionDisplay({ section, handleChange }) {
       oldValue.products = newValues;
       return oldValue;
     });
-    handleChange(newValues);
+
+    handleChange({ ...data, products: newValues });
   };
   const handleFAQChange = (e, idx, field) => {
     const newValues = [...data.FAQ];
@@ -80,7 +82,8 @@ export default function SectionDisplay({ section, handleChange }) {
       oldValue.FAQ = newValues;
       return oldValue;
     });
-    handleChange(newValues);
+
+    handleChange({ ...data, FAQ: newValues });
   };
   const handleContactChange = (e, idx, field) => {
     const newValues = [...data.contact];
@@ -89,7 +92,8 @@ export default function SectionDisplay({ section, handleChange }) {
       oldValue.contact = newValues;
       return oldValue;
     });
-    handleChange(newValues);
+
+    handleChange({ ...data, contact: newValues });
   };
   const handleProjectsChange = (e, idx, field) => {
     const newValues = [...data.projects];
@@ -110,7 +114,8 @@ export default function SectionDisplay({ section, handleChange }) {
       oldValue.projects = newValues;
       return oldValue;
     });
-    handleChange(newValues);
+
+    handleChange({ ...data, projects: newValues });
   };
   const handleAwardsChange = (e, idx, field) => {
     const newValues = [...data.awards];
@@ -127,7 +132,8 @@ export default function SectionDisplay({ section, handleChange }) {
       oldValue.awards = newValues;
       return oldValue;
     });
-    handleChange(newValues);
+
+    handleChange({ ...data, awards: newValues });
   };
 
   return (

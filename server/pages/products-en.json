@@ -2,7 +2,8 @@
   {
     "title": "choose your products",
     "subtitle": null,
-    "type": "product"
+    "type": "product",
+    "products": []
   },
   {
     "title": "need a custom formula",

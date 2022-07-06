@@ -37,6 +37,7 @@ routes.get("/", async (req, res) => {
     default:
       return res.status(400).json({ message: "invalide page" });
   }
+  console.log(page);
   res.status(200).json(page);
 });
 
