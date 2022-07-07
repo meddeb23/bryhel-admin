@@ -58,7 +58,7 @@ export function Location({ data, action }) {
                 className="TextArea"
                 type="text"
                 value={item.name}
-                onChange={(e) => action(e, idx)}
+                action={(e) => action(e, idx)}
               />
             </div>
           </div>
@@ -88,7 +88,7 @@ export function Product({ data, action }) {
                 className="TextArea"
                 type="text"
                 value={item.name}
-                onChange={(e) => action(e, idx)}
+                action={(e) => action(e, idx)}
               />
             </div>
           </div>

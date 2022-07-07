@@ -6,7 +6,6 @@ const JWT_SECRET = process.env.JWT_SECRET || "CKJ$%sGKGF$KJJfHFL";
 
 const auth = async (req, res, next) => {
   const { token } = req.cookies;
-  console.log(token);
   if (token) {
     const decode = jwt.verify(token, JWT_SECRET);
     if (!decode) throw new httpError("Access Deneied", 401);

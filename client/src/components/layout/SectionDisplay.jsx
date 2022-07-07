@@ -55,6 +55,7 @@ export default function SectionDisplay({ section, handleChange }) {
   };
   const handleProductChange = (e, idx, field) => {
     const newValues = [...data.products];
+    console.log("test");
     if (field === "file") {
       setnewImages((oldValue) => [
         ...oldValue,

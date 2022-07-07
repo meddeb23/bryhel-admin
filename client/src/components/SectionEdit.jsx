@@ -5,7 +5,7 @@ export default function TextArea({ value, action, className }) {
 
   useEffect(() => {
     if (textArea.current) {
-      textArea.current.style.height = textArea.current.scrollHeight + 5 + "px";
+      textArea.current.style.height = textArea.current.scrollHeight + "px";
     }
   }, [textArea]);
 
@@ -19,7 +19,6 @@ export default function TextArea({ value, action, className }) {
       value={value}
       onChange={(e) => {
         action(e);
-        console.log(Math.max(textArea.current.scrollHeight, 30) + 5 + "px");
         textArea.current.style.height =
           Math.max(textArea.current.scrollHeight, 30) + "px";
       }}

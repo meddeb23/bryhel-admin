@@ -85,7 +85,6 @@ routes.post("/upload", async (req, res) => {
       image.data
     );
     const filePath = `/static/${type}_${image.name}`;
-
     switch (type) {
       case "award":
         await Award.update({ logo: filePath }, { where: { slug } });
@@ -94,10 +93,11 @@ routes.post("/upload", async (req, res) => {
         await Location.update({ logo: filePath }, { where: { slug } });
         break;
       case "product":
-        await Product.update({ logo: filePath }, { where: { slug } });
+        console.log(slug, type, filePath);
+        await Product.update({ image: filePath }, { where: { slug } });
         break;
       case "project":
-        await Project.update({ logo: filePath }, { where: { slug } });
+        await Project.update({ image: filePath }, { where: { slug } });
         break;
 
       default:

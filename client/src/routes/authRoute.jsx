@@ -18,8 +18,6 @@ export default function AuthRoute({ children, ...rest }) {
         if (status === 200) {
           setUser(data.user);
           setIsLoggedin(true);
-          // setIsAdmin(data.isAdmin);
-          // socket_client.ioConnection(data.user._id);
           setSearch(true);
         }
       })

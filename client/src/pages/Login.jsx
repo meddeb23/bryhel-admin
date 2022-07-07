@@ -6,7 +6,7 @@ import { UserContext } from "../components/UserContext";
 import { useForm } from "../components/hooks/useForm";
 
 export default function Login() {
-  const [isRedirecting, setisRedirecting] = useState(true);
+  const [isRedirecting, setisRedirecting] = useState(false);
   const { setIsLoggedin, setUser } = useContext(UserContext);
   const [values, setValues] = useForm({ email: "", password: "" });
   const [showPwd, setShowPwd] = useState(false);
@@ -18,20 +18,20 @@ export default function Login() {
 
   let { from } = location.state || { from: { pathname: "/home" } };
 
-  useEffect(() => {
-    userApi
-      .getUser()
-      .then(({ data, status }) => {
-        if (status === 200) {
-          setUser(data.user);
-          history.push(from);
-        }
-      })
-      .catch((err) => {
-        setisRedirecting(false);
-        console.log(err);
-      });
-  }, []);
+  // useEffect(() => {
+  //   userApi
+  //     .getUser()
+  //     .then(({ data, status }) => {
+  //       if (status === 200) {
+  //         setUser(data.user);
+  //         history.push(from);
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       setisRedirecting(false);
+  //       console.log(err);
+  //     });
+  // }, []);
 
   const onSubmitForm = async (e) => {
     e.preventDefault();
@@ -41,8 +41,8 @@ export default function Login() {
       if (status === 200 && data.user) {
         setUser(data.user);
         setIsLoggedin(true);
-        console.log(from);
         history.push(from);
+        setIsFetching(false);
       } else setIsFetching(false);
     } catch (error) {
       if (error.response && error.response.status === 400) {
@@ -55,7 +55,7 @@ export default function Login() {
   return isRedirecting ? (
     <></>
   ) : (
-    <div className="mt-4 mx-auto flex justify-center items-center text-gray-600">
+    <div className="mt-4 mx-auto min-h-screen flex justify-center items-center text-gray-600">
       <div className="mx-8">
         <h1 className="font-bold text-4xl ml-4 ">Login</h1>
         <form
