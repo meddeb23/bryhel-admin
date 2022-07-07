@@ -7,10 +7,16 @@ const sequelize = new Sequelize(
   {
     host: process.env.DB_HOST,
     dialect: "mysql",
+    logging: false,
     define: {
       timestamps: false,
     },
   }
 );
+
+sequelize.authenticate().then((err) => {
+  if (err) debug("Unable to connect to the database:", error);
+  else debug("Connection has been established successfully.");
+});
 
 module.exports = sequelize;

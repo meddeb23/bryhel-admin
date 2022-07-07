@@ -84,7 +84,6 @@ routes.post("/register", async (req, res, next) => {
 // @desc    login user
 // @access  public
 routes.get("/logout", auth, (req, res) => {
-  User.findByIdAndUpdate(req.body.user.id, { login: false });
   res.clearCookie("token");
   res.status(200).send("logout user");
 });

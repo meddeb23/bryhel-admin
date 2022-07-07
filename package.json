@@ -4,12 +4,12 @@
   "description": "admin dashboard ",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.js",
-    "dev:server": "nodemon server/server.js",
+    "dev": "nodemon server/server.js",
     "init-db": "node ./server/database/init-database.js",
     "client": "npm start --prefix client",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client && npm run init-db"
+    "install": "npm i && npm i --prefix clinet",
+    "build": "NODE_ENV=production npm run build --prefix client && npm run init-db "
   },
   "repository": {
     "type": "git",

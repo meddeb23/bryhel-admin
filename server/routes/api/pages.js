@@ -8,6 +8,7 @@ const Award = require("../../models/Award");
 const Location = require("../../models/location");
 const Product = require("../../models/Product");
 const Project = require("../../models/Project");
+const { auth } = require("../../middlewares/auth");
 
 // @desc get the page content
 
@@ -43,7 +44,7 @@ routes.get("/", async (req, res) => {
 
 // @desc update the page content
 
-routes.post("/", async (req, res) => {
+routes.post("/", auth, async (req, res) => {
   const language = req.query.language || "en";
   const title = req.query.title || "about";
   const { content } = req.body;
@@ -71,7 +72,7 @@ routes.post("/", async (req, res) => {
   res.status(203).json({ success: true });
 });
 
-routes.post("/upload", async (req, res) => {
+routes.post("/upload", auth, async (req, res) => {
   const { slug, type } = req.body;
   const { image } = req.files;
   if (image) {
