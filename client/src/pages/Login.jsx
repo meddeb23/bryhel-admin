@@ -150,12 +150,6 @@ export default function Login() {
               connect
             </button>
           )}
-          <p className="text-xs text-gray-400 m-4 text-center">
-            Dont have an account
-            <NavLink className="text-purple-700 pl-2" to="/register">
-              Creat an account
-            </NavLink>
-          </p>
         </form>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useContext } from "react";
-import { Navigate, Route } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 
 import { userApi } from "../api";
 import { UserContext } from "../components/UserContext";
@@ -10,7 +10,7 @@ import { UserContext } from "../components/UserContext";
 export default function AuthRoute({ children, ...rest }) {
   const { isLoggedin, setUser, setIsLoggedin } = useContext(UserContext);
   const [search, setSearch] = useState(false);
-
+  const location = useLocation();
   useEffect(() => {
     userApi
       .getUser()
@@ -26,23 +26,11 @@ export default function AuthRoute({ children, ...rest }) {
         console.log(error);
       });
   }, []);
-  return (
-    search && (
-      <Route
-        {...rest}
-        render={({ location }) =>
-          isLoggedin ? (
-            children
-          ) : (
-            <Navigate
-              to={{
-                pathname: "/login",
-                state: { from: location },
-              }}
-            />
-          )
-        }
-      />
-    )
-  );
+  if (search) {
+    return !isLoggedin ? (
+      <Navigate to={{ pathname: "/login", state: { from: location } }} />
+    ) : (
+      children
+    );
+  } else return <></>;
 }

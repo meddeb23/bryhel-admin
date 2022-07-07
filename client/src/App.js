@@ -14,9 +14,14 @@ function App() {
       <ContextProvider>
         <BrowserRouter>
           <Routes>
-            {/* <AuthRoute path="/home" exact>
-            </AuthRoute> */}
-            <Route path="/home" element={<HomePage />} />
+            <Route
+              path="/home"
+              element={
+                <AuthRoute>
+                  <HomePage />
+                </AuthRoute>
+              }
+            />
 
             <Route path="/login" element={<Login />} exact />
 
