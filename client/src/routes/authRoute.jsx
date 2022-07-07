@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useContext } from "react";
-import { Redirect, Route } from "react-router-dom";
+import { Navigate, Route } from "react-router-dom";
 
 import { userApi } from "../api";
 import { UserContext } from "../components/UserContext";
@@ -34,7 +34,7 @@ export default function AuthRoute({ children, ...rest }) {
           isLoggedin ? (
             children
           ) : (
-            <Redirect
+            <Navigate
               to={{
                 pathname: "/login",
                 state: { from: location },

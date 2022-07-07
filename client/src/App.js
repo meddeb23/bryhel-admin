@@ -1,12 +1,6 @@
 import "./styles/globals.css";
 import "tailwindcss/tailwind.css";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-  Link,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import HomePage from "./pages";
 import Login from "./pages/Login";
@@ -18,17 +12,17 @@ function App() {
   return (
     <UserContextProvider>
       <ContextProvider>
-        <Router>
-          <Switch>
-            <AuthRoute path="/home" exact>
-              <HomePage />
-            </AuthRoute>
-            <Route path="/login" exact>
-              <Login />
-            </Route>
-            <Redirect from="/*" to="/home" />
-          </Switch>
-        </Router>
+        <BrowserRouter>
+          <Routes>
+            {/* <AuthRoute path="/home" exact>
+            </AuthRoute> */}
+            <Route path="/home" element={<HomePage />} />
+
+            <Route path="/login" element={<Login />} exact />
+
+            <Route path="*" element={<Navigate to="/home" replace />} />
+          </Routes>
+        </BrowserRouter>
       </ContextProvider>
     </UserContextProvider>
   );

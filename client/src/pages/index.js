@@ -5,8 +5,8 @@ import { Store } from "../components/ContextProvider";
 
 function HomePage() {
   const [success, setsuccess] = useState(false);
-  const [page, setpage] = useState("about");
-  const [lang, setlang] = useState("en");
+  const [page, setpage] = useState(localStorage.getItem("page") || "about");
+  const [lang, setlang] = useState(localStorage.getItem("language") || "en");
   const [data, setData] = useState();
   const { setcontent, content, newImages } = useContext(Store);
 
@@ -17,6 +17,9 @@ function HomePage() {
         setcontent(data);
         setData(data);
       });
+
+    localStorage.setItem("page", page);
+    localStorage.setItem("language", lang);
   }, [page, lang]);
 
   const handleChange = (newData) => {

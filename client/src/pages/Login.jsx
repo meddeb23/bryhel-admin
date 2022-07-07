@@ -1,37 +1,37 @@
 import React, { useContext, useEffect, useState } from "react";
-import { NavLink, useHistory, useLocation } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 
 import userApi from "../api/userApi";
 import { UserContext } from "../components/UserContext";
 import { useForm } from "../components/hooks/useForm";
 
 export default function Login() {
-  const [isRedirecting, setisRedirecting] = useState(false);
+  const [isRedirecting, setisRedirecting] = useState(true);
   const { setIsLoggedin, setUser } = useContext(UserContext);
   const [values, setValues] = useForm({ email: "", password: "" });
   const [showPwd, setShowPwd] = useState(false);
   const [error, setError] = useState("");
   const [isFetching, setIsFetching] = useState(false);
 
-  let history = useHistory();
   let location = useLocation();
+  let navigate = useNavigate();
 
   let { from } = location.state || { from: { pathname: "/home" } };
 
-  // useEffect(() => {
-  //   userApi
-  //     .getUser()
-  //     .then(({ data, status }) => {
-  //       if (status === 200) {
-  //         setUser(data.user);
-  //         history.push(from);
-  //       }
-  //     })
-  //     .catch((err) => {
-  //       setisRedirecting(false);
-  //       console.log(err);
-  //     });
-  // }, []);
+  useEffect(() => {
+    userApi
+      .getUser()
+      .then(({ data, status }) => {
+        if (status === 200) {
+          setUser(data.user);
+          navigate(from);
+        }
+      })
+      .catch((err) => {
+        setisRedirecting(false);
+        console.log(err);
+      });
+  }, []);
 
   const onSubmitForm = async (e) => {
     e.preventDefault();
@@ -41,7 +41,7 @@ export default function Login() {
       if (status === 200 && data.user) {
         setUser(data.user);
         setIsLoggedin(true);
-        history.push(from);
+        navigate(from);
         setIsFetching(false);
       } else setIsFetching(false);
     } catch (error) {
