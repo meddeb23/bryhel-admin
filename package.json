@@ -5,13 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:server": "node server/server.js",
+    "start": "node server/server.js",
     "dev:server": "nodemon server/server.js",
     "init-db": "node ./server/database/init-database.js",
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "client": "npm start --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
@@ -37,10 +35,6 @@
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3",
-    "next": "^12.2.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.4.0",
     "sequelize": "^6.21.2"
   },
   "devDependencies": {
@@ -48,9 +42,6 @@
     "debug": "^4.3.4",
     "eslint": "^8.19.0",
     "eslint-config-next": "^12.2.0",
-    "nodemon": "^2.0.18",
-    "postcss": "^8.4.14",
-    "prettier": "^2.7.1",
-    "tailwindcss": "^3.1.4"
+    "nodemon": "^2.0.18"
   }
 }

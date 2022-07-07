@@ -31,7 +31,8 @@ export default function DropDownMenu({
                   className="py-2 px-4  hover:bg-gray-200 cursor-pointer"
                   key={`page_${value}`}
                   onClick={() => {
-                    onSelect(value), setshowList(false);
+                    onSelect(value);
+                    setshowList(false);
                   }}
                 >
                   {value}

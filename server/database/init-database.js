@@ -1,5 +1,6 @@
 require("dotenv").config();
 const sequelize = require("./database");
+const bcrypt = require("bcryptjs");
 
 // models
 const Contact = require("../models/Contact");
@@ -9,6 +10,7 @@ const FAQ = require("../models/FAQ");
 const Award = require("../models/Award");
 const Product = require("../models/Product");
 const Project = require("../models/Project");
+const User = require("../models/User");
 
 // data
 const contacts = require("../data/contact.json");
@@ -21,6 +23,20 @@ const projects = require("../data/projects.json");
 
 async function initDB() {
   await sequelize.sync({ force: true });
+
+  const password = "password";
+  const salt = await bcrypt.genSalt(10);
+  if (!salt) throw Error("Something went wrong with bcrypt");
+
+  const hash = await bcrypt.hash(password, salt);
+  if (!hash) throw Error("Something went wrong hashing the password");
+
+  await User.create({
+    name: "youssef admin",
+    admin: true,
+    email: "email@example.com",
+    password: hash,
+  });
   await Project.bulkCreate(projects);
   await Contact.bulkCreate(contacts);
   await RandD.bulkCreate(researchAndDevelopment);

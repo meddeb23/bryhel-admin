@@ -4,6 +4,7 @@ import { Container, ControleBar, SectionDisplay } from "../components";
 import { Store } from "../components/ContextProvider";
 
 function HomePage() {
+  const [success, setsuccess] = useState(false);
   const [page, setpage] = useState("about");
   const [lang, setlang] = useState("en");
   const [data, setData] = useState();
@@ -47,7 +48,12 @@ function HomePage() {
     }
     axios
       .post(`/api/v1/page?title=${page}&language=${lang}`, { content })
-      .then(({ data }) => console.log(data));
+      .then(({ data }) => {
+        if (data.success) {
+          setsuccess(true);
+          setTimeout(() => setsuccess(false), 3000);
+        }
+      });
   };
 
   return (
@@ -74,6 +80,13 @@ function HomePage() {
       >
         Save
       </button>
+      {success && (
+        <div className="fixed  w-1/2  bottom-5 ">
+          <p className="p-4 bg-green-600 text-center text-white rounded-lg">
+            document saved successfully
+          </p>
+        </div>
+      )}
     </Container>
   );
 }

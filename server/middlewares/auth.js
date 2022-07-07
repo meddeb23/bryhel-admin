@@ -1,16 +1,16 @@
-const User = require("../user/models/User");
 const jwt = require("jsonwebtoken");
+const User = require("../models/User");
 const httpError = require("../utilities/httpError");
-const debug = require("debug")("app:socket");
 
 const JWT_SECRET = process.env.JWT_SECRET || "CKJ$%sGKGF$KJJfHFL";
 
 const auth = async (req, res, next) => {
   const { token } = req.cookies;
+  console.log(token);
   if (token) {
     const decode = jwt.verify(token, JWT_SECRET);
     if (!decode) throw new httpError("Access Deneied", 401);
-    const user = await User.findById(decode._id);
+    const user = await User.findOne({ where: { id: decode.id } });
     if (!user) throw new httpError("Access Deneied", 401);
     req.body = {
       ...req.body,
@@ -21,6 +21,7 @@ const auth = async (req, res, next) => {
     throw new httpError("Access Deneied", 401);
   }
 };
+/*
 const isAdmin = async (req, res, next) => {
   const { token } = req.cookies;
   if (token) {
@@ -43,5 +44,5 @@ const isAdmin = async (req, res, next) => {
     throw new httpError("Access Deneied", 401);
   }
 };
-
-module.exports = { auth, isAdmin };
+*/
+module.exports = { auth };
